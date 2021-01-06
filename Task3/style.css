@@ -1,0 +1,118 @@
+.wrapper{
+	margin: 0 auto;
+	padding: 10px;
+}
+.wrap{
+	width:100%;
+}
+.contain{
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.shel{
+	position: absolute;
+    left: 63px;
+    top: 23px;
+    text-align: left;
+}
+.shel h1{
+	font-size: 70px;
+}
+.shel span{
+	font-size: 30px;
+}
+.nav_section{
+	position: absolute;
+    left: 63px;
+    bottom: 23px;
+    margin-left: 200px;
+    padding-left: 231px;
+
+}
+.nav_section nav{
+	padding: 80px;
+	display: inline-block;
+	padding-bottom: 20px;
+	font-size: 35px;
+}
+.welcome_section{
+	margin-left: 150px;
+	padding-left: 53px;
+	margin-right: 480px;
+}
+.welcome_section h2{
+	font-size: 50px;
+	color: #b3b8c1;
+}
+.welcome_section p{
+	font-size: 35px;
+}
+.img_section{
+	margin-left: 15px;
+	padding-left: 185px;
+}
+.fig_sec{
+	margin: auto;
+	display: inline-block;
+	width: 20%;
+	margin-top: 10px;
+}
+.fig_sec img{
+	width: 445px;
+    height: 535px
+    padding: 0px;
+
+}
+.fig_sec figcaption{
+	font-size: 30px
+}	
+.list ul{
+	list-style-type:none;
+	text-align: center;
+	margin-top: 85px;
+}
+.listed_list{
+	display: inline-block;
+	margin-right: 35px;
+	padding: 15px;
+	width: 65px;
+	height: 40px;
+}
+.help h3{
+	margin-left: 106px;
+    padding-top: 35px;
+    font-size: 55px;
+}
+
+.help{
+	color:#ffffff;
+	background-color: #276599;
+    margin: 175px;
+    padding-bottom: 50px;
+}
+.help p{
+	margin-left: 107px;
+    padding-right: 128px;
+    margin-bottom: 35px;
+   font-size: 32px;
+}
+.anch{
+	text-decoration:none; 
+	color: #ffffff;
+    margin-left: 105px;
+    padding: 14px;
+    border: solid 1px;
+    font-size: 28px;
+}
+footer{
+	height: 90px;
+    font-size: 40px;
+    padding: 27px;
+    padding-left: 60px;
+    background-color: #333333;
+    color: #ffffff;
+}
+footer p{
+	text-align:center; 
+}

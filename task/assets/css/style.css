@@ -1,0 +1,814 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: "Futura Bold", "Gill Sans", Arial, "Helvetica Neue", Helvetica,
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.back_img {
+  background-image: url(file:///home/prdxn81/Desktop/task/assets/images/bg.jpg);
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 110px;
+}
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 40px 430px 20px 534px;
+  border: solid 1px #000;
+}
+.foot_img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.foot_img img {
+  width: 106%;
+}
+/*.foot_img{
+  background-image: url(file:///home/prdxn81/Desktop/task/assets/images/table.jpg);
+}*/
+.float_1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #be263d;
+  width: 100px;
+  height: 100px;
+  background: none;
+  position: absolute;
+  animation-name: float_1;
+  animation-duration: 1.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes float_1 {
+  0% {
+    left: -200px;
+    top: 100px;
+    display: none;
+  }
+  10%{
+    left: 85px;
+    top: 100px;
+  }
+  90%{
+    left: 85px;
+    top: 100px;
+  }
+  100% {
+    left: 85px;
+    top: 100px;
+  }
+}
+.float_2 {
+  margin-left: -243px;
+  margin-top: -84px;
+  z-index: 5;
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  /* animation: animate__slideInLeft forwards ; */
+  animation-name: float_2;
+  animation-duration:3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  /* animation-iteration-count: 2; */
+  
+}
+
+@keyframes float_2 {
+  0% {
+    left: 0px;
+    bottom: 40px;
+    /* opacity: 0; */
+  }
+  10%{
+    left: 240px;
+    bottom: 40px;
+    /* opacity: 0.5; */
+  }
+  90%{
+    left: 240px;
+    bottom: 40px;
+  }
+  100%{
+    left: 0px;
+    bottom: 40px;
+    
+  }
+  
+
+}
+.float_2 img {
+  margin-top: 58px;
+  z-index: 19;
+  width: 185%;
+}
+.mayo{
+  position: absolute;
+  animation-name: mayo;
+  animation-duration: 1.5s;
+  animation-delay: 3.3s;
+  bottom: 35px;
+  z-index: 7;
+  left: -145px;
+}
+
+
+@keyframes mayo{
+  0%{
+    left: 45px;
+    bottom: 35px;
+    opacity: 0;
+  }
+  50%{
+    left: 45px;
+    bottom: 35px;
+
+    opacity:0.5;
+  }
+  90%{
+    left: 45px;
+    bottom: 35px;
+
+    opacity:1;
+  }
+  95%{
+    left: 45px;
+    bottom: 35px;
+    opacity:1;
+  }
+  99%{
+    left: 45px;
+    bottom: 35px;
+    opacity:1;
+  }
+
+  100%{
+    left: -145px;
+    bottom: 35px;
+    opacity: 0;
+  }
+}
+.knife{
+  left: -195px;
+  bottom: 45px;
+  position: absolute;
+  animation-name: knife;
+  animation-duration: 5s;
+  bottom: 45px;
+  z-index: 8;
+  transform: rotate(280deg);
+}
+@keyframes knife{
+  0%{
+    left: 35px;
+    bottom: 37px;
+    opacity: -2;
+  }
+  80%{
+    left: 35px;
+    bottom: 37px;
+    opacity: -2;
+  }
+
+  90%{
+    left: 35px;
+    bottom: 45px;
+    opacity:0;
+
+  }
+  99%{
+    left: 95px;
+    bottom: 40px;
+    opacity: 1;
+  }
+
+  100%{
+    left: -195px;
+    bottom: 45px;
+    opacity: -2;
+  }
+
+}
+
+.float_3 {
+  z-index: 5;
+  margin-bottom: 350px;
+  margin-top: 0px;
+  margin-right: 25px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_3;
+  animation-duration: 1.5s;
+  animation-delay: 0.7s;
+  animation-fill-mode: both;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes float_3 {
+  0% {
+    right: -100px;
+    bottom: 10px;
+    
+  }
+  10%{
+    right: 85px;
+    bottom: 10px;
+  }
+  90%{
+    right: 85px;
+    bottom: 10px;
+  }
+  100% {
+    right: 85px;
+    bottom: 10px;
+    
+  }
+}
+.float_3 img {
+  padding-left: 25px;
+  padding-top: 114px;
+}
+ .low_bread{
+  left: -250px;
+  bottom: 40px;
+  z-index: 3;
+  width: 130px;
+  height: 35px;
+  position: absolute;
+  
+  animation-name: floa;
+  animation-duration: 8.3s;
+  animation-delay: 3.3s;
+  animation-direction: alternate;
+
+  
+}
+@keyframes floa {
+  0% {
+    left: -200px;
+    bottom: 40px
+  }
+  10%{
+    left: 0px;
+    bottom: 40px;
+  }
+  100% {
+    left:0px;
+    bottom: 40px;
+   
+  }
+}
+.mid_bread{
+  z-index: 5;
+  width: 130px;
+  height: 66px;
+  position: absolute;
+  left: -203px;
+  bottom: 0px;
+  animation-name: mid;
+  animation-duration: 8.3s;
+  animation-delay: 3.3s;
+  animation-direction: alternate;
+
+  
+}
+@keyframes mid{
+  0%{
+    left: -200px;
+    bottom: 0px;
+  }
+  10%{
+    left: 33px;
+    bottom: 0px;
+  }
+  100%{
+    left: 33px;
+    bottom: 0px;
+  }
+}
+.upp_bread {
+  left: -200px;
+  bottom: 43px;
+  position: absolute;
+  z-index: 20;
+  animation-name: float;
+  animation-duration: 8.3s;
+  animation-delay: 3.3s;
+  
+  animation-direction: alternate;
+
+}
+@keyframes float {
+  0% {
+    left: -200px;
+    bottom: 43px;
+  }
+  10% {
+    left: 37px;
+    bottom: 43px;
+  }
+  15%{
+    left:37px;
+    bottom: 80px;
+  }
+  20%{
+    left: 37px;
+    bottom: 43px;
+  }
+  100% {
+    left: 37px;
+    bottom: 43px;
+  }
+}
+
+
+.float_5{
+  right: -203px;
+  bottom: 278px;
+  z-index: 7;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_5;
+  animation-duration: 3.3s;
+  animation-delay: 6s;
+  animation-direction: alternate;
+}
+@keyframes float_5 {
+  0% {
+    right: -200px;
+    bottom: 278px;
+  }
+  10%{
+    right: 133px;
+    bottom: 278px;
+  }
+  100% {
+    right: 133px;
+     bottom: 278px;
+    
+  }
+}
+.bangaya{
+  left: -250px;
+  top: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #be263d;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  animation-name: bangaya;
+  animation-duration: 3s;
+  animation-delay: 6s;
+  animation-direction: alternate;
+}
+@keyframes bangaya{
+  0% {
+    left: -250px;
+    top: 100px;
+  }
+  10%{
+    left: 40px;
+    top: 100px;
+  }
+  90%{
+    left: 40px;
+    top: 100px;
+  }
+  100% {
+    left:40px;
+    top: 100px;
+  }
+}
+
+.float_6 {
+  left: -350px;
+  top: 100px;
+  padding-right: 0px;
+  font-size: 35px;
+  font-weight: 500;
+  color: #be263d;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_6;
+  animation-duration: 3.3s;
+  animation-delay: 9.3s;
+  animation-direction: alternate;
+
+}
+
+@keyframes float_6 {
+  0% {
+    left: -350px;
+    top: 100px;
+    
+  }
+  10%{
+    left: 10px;
+    top: 100px;
+  }
+  100% {
+    left: 10px;
+    top: 100px;
+  
+  }
+}
+.float_6 h2 {
+  text-align: center;
+}
+
+.float_7 {
+  z-index: 5;
+  right: -100px;
+  bottom: 280px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_7;
+  animation-duration: 3.3s;
+  animation-delay: 9.3s;
+  animation-direction: alternate;
+}
+.float_7 img {
+  /* padding-top: 75px; */
+}
+@keyframes float_7 {
+  0% {
+    right: -100px;
+    bottom: 280px;
+  }
+  100% {
+    right: 125px;
+    bottom:280px;
+  }
+}
+
+.float_8 {
+  left: -350px;
+  text-align: center;
+  top: 100px;
+  padding-right: 0px;
+  font-size: 34px;
+  font-weight: 500;
+  color: #be263d;
+  width: 210px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_8;
+  animation-duration: 3s;
+  animation-delay: 12.6s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes float_8 {
+  0% {
+    left: -300px;
+    top: 100px;
+    
+  }
+  10%{
+    left: 52px;
+    top: 100px;
+  }
+  100% {
+    left: 52px;
+    top: 100px;
+  }
+}
+.float_6 h2 {
+  text-align: center;
+}
+.float_9 {
+  bottom: 80px;
+  right: -100px;
+  z-index: 5;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: float_9;
+  animation-duration: 10s;
+  animation-delay: 12.6s;
+  animation-direction: alternate;
+}
+
+@keyframes float_9 {
+  0% {
+    right: -120px;
+    bottom: 80px;
+
+  }
+  10%{
+    right: 120px;
+    bottom: 80px;
+  }
+  100% {
+    right: 120px;
+    bottom: 80px;
+  }
+  
+} 
+.recipe{
+  background-color: #3f2d88;
+  padding-bottom: 4px;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  bottom: 320px;
+  right: -200px;
+  z-index: 5;
+  width: 127px;
+  height: 44px;
+  position: absolute;
+  animation-name: recipe;
+  animation-duration: 10s;
+  animation-delay: 12.6s;
+  animation-direction: alternate;
+}
+.recipe a{
+  text-decoration: none;
+  color: #fff;
+  padding: 47px 2px 0px 14px;
+}
+@keyframes recipe{
+  0%{
+    bottom: 320px;
+    right: -200px;
+  }
+  10%{
+    bottom: 320px;
+    right: 97px;
+  }
+  100%{
+    bottom: 320px;
+    right: 97px;
+  }
+}
